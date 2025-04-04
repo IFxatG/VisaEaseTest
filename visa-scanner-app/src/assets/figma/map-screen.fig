@@ -1,0 +1,85 @@
+{
+  "name": "Map Screen",
+  "width": 375,
+  "height": 812,
+  "backgroundColor": "#FFFFFF",
+  "elements": {
+    "map": {
+      "type": "map",
+      "position": { "x": 0, "y": 0 },
+      "width": 375,
+      "height": 812,
+      "provider": "google",
+      "style": "3D",
+      "markers": [
+        {
+          "position": {
+            "latitude": 21.0285,
+            "longitude": 105.8542
+          },
+          "title": "Đại sứ quán Mỹ",
+          "description": "170 Ngọc Khánh, Ba Đình, Hà Nội"
+        },
+        {
+          "position": {
+            "latitude": 21.0333,
+            "longitude": 105.8167
+          },
+          "title": "Đại sứ quán Anh",
+          "description": "Central Building, 31 Hai Ba Trung, Hoan Kiem, Hanoi"
+        },
+        {
+          "position": {
+            "latitude": 21.0333,
+            "longitude": 105.8167
+          },
+          "title": "Đại sứ quán Pháp",
+          "description": "57 Tran Hung Dao, Hoan Kiem, Hanoi"
+        }
+      ]
+    },
+    "overlay": {
+      "type": "container",
+      "position": { "x": 0, "y": 0 },
+      "width": 375,
+      "height": 120,
+      "backgroundColor": "rgba(255, 255, 255, 0.9)",
+      "content": {
+        "title": {
+          "text": "Đại sứ quán",
+          "style": "h1",
+          "marginBottom": 8
+        },
+        "subtitle": {
+          "text": "Tìm đường đến đại sứ quán",
+          "style": "body",
+          "color": "#666666"
+        }
+      }
+    },
+    "controls": {
+      "type": "container",
+      "position": { "x": 335, "y": 712 },
+      "width": 40,
+      "height": 100,
+      "items": [
+        {
+          "type": "button",
+          "icon": "my-location",
+          "size": 40,
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 20,
+          "shadow": "small"
+        },
+        {
+          "type": "button",
+          "icon": "layers",
+          "size": 40,
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 20,
+          "shadow": "small"
+        }
+      ]
+    }
+  }
+} 

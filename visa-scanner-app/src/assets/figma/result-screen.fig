@@ -1,0 +1,92 @@
+{
+  "name": "Result Screen",
+  "width": 375,
+  "height": 812,
+  "backgroundColor": "#FFFFFF",
+  "elements": {
+    "header": {
+      "type": "container",
+      "position": { "x": 0, "y": 0 },
+      "width": 375,
+      "height": 120,
+      "backgroundColor": "#F5F5F5",
+      "content": {
+        "title": {
+          "text": "Kết quả phân tích",
+          "style": "h1",
+          "marginBottom": 8
+        },
+        "subtitle": {
+          "text": "Họ tên: {fullName}",
+          "style": "body",
+          "color": "#666666"
+        }
+      }
+    },
+    "chart": {
+      "type": "chart",
+      "position": { "x": 20, "y": 140 },
+      "width": 335,
+      "height": 220,
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 12,
+      "shadow": "small",
+      "data": {
+        "labels": ["Độ rõ", "Độ chính xác", "Độ tin cậy"],
+        "values": [85, 92, 88],
+        "colors": ["#4CAF50", "#FFC107", "#F44336"]
+      }
+    },
+    "scoreBox": {
+      "type": "container",
+      "position": { "x": 37.5, "y": 380 },
+      "width": 300,
+      "height": 120,
+      "backgroundColor": "#F5F5F5",
+      "borderRadius": 15,
+      "shadow": "medium",
+      "content": {
+        "score": {
+          "text": "88",
+          "style": "h1",
+          "color": "#4CAF50"
+        },
+        "status": {
+          "text": "Tốt",
+          "style": "h2",
+          "color": "#4CAF50"
+        }
+      }
+    },
+    "details": {
+      "type": "container",
+      "position": { "x": 20, "y": 520 },
+      "width": 335,
+      "height": 272,
+      "content": {
+        "title": {
+          "text": "Chi tiết phân tích",
+          "style": "h2",
+          "marginBottom": 16
+        },
+        "items": [
+          {
+            "label": "Độ rõ",
+            "value": "85%",
+            "color": "#4CAF50"
+          },
+          {
+            "label": "Độ chính xác",
+            "value": "92%",
+            "color": "#FFC107"
+          },
+          {
+            "label": "Độ tin cậy",
+            "value": "88%",
+            "color": "#F44336"
+          }
+        ]
+      }
+    }
+  }
+} 

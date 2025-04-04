@@ -1,0 +1,57 @@
+{
+  "name": "Review Screen",
+  "width": 375,
+  "height": 812,
+  "backgroundColor": "#FFFFFF",
+  "elements": {
+    "imagePreview": {
+      "type": "container",
+      "position": { "x": 0, "y": 0 },
+      "width": 375,
+      "height": 300,
+      "backgroundColor": "#F5F5F5",
+      "content": {
+        "image": {
+          "type": "image",
+          "width": "100%",
+          "height": "100%",
+          "objectFit": "cover"
+        }
+      }
+    },
+    "formContainer": {
+      "type": "container",
+      "position": { "x": 20, "y": 320 },
+      "width": 335,
+      "height": 472,
+      "content": {
+        "fullName": {
+          "type": "input",
+          "label": "Họ và tên",
+          "placeholder": "Nhập họ và tên",
+          "marginBottom": 16
+        },
+        "passportNumber": {
+          "type": "input",
+          "label": "Số hộ chiếu",
+          "placeholder": "Nhập số hộ chiếu",
+          "marginBottom": 24
+        },
+        "submitButton": {
+          "type": "button",
+          "width": "100%",
+          "height": 60,
+          "backgroundColor": "#007AFF",
+          "borderRadius": 8,
+          "content": {
+            "text": {
+              "content": "Xác nhận",
+              "style": "h2",
+              "color": "#FFFFFF"
+            }
+          }
+        }
+      }
+    }
+  }
+} 

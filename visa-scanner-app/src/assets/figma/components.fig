@@ -1,0 +1,120 @@
+{
+  "components": {
+    "button": {
+      "name": "Button",
+      "variants": {
+        "primary": {
+          "backgroundColor": "#007AFF",
+          "textColor": "#FFFFFF",
+          "borderRadius": 8,
+          "padding": {
+            "vertical": 12,
+            "horizontal": 24
+          }
+        },
+        "secondary": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#333333",
+          "borderRadius": 8,
+          "padding": {
+            "vertical": 12,
+            "horizontal": 24
+          }
+        }
+      }
+    },
+    "input": {
+      "name": "Input",
+      "variants": {
+        "default": {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#DDDDDD",
+          "borderRadius": 8,
+          "padding": {
+            "vertical": 12,
+            "horizontal": 16
+          },
+          "label": {
+            "color": "#333333",
+            "style": "body"
+          },
+          "placeholder": {
+            "color": "#999999"
+          }
+        }
+      }
+    },
+    "card": {
+      "name": "Card",
+      "variants": {
+        "default": {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 12,
+          "shadow": "small",
+          "padding": 16
+        },
+        "highlight": {
+          "backgroundColor": "#F5F5F5",
+          "borderRadius": 12,
+          "shadow": "medium",
+          "padding": 16
+        }
+      }
+    },
+    "navigation": {
+      "name": "Bottom Navigation",
+      "variants": {
+        "default": {
+          "backgroundColor": "#FFFFFF",
+          "height": 100,
+          "borderTop": {
+            "width": 1,
+            "color": "#EEEEEE"
+          },
+          "item": {
+            "icon": {
+              "size": 24,
+              "activeColor": "#007AFF",
+              "inactiveColor": "#666666"
+            },
+            "label": {
+              "style": "caption",
+              "activeColor": "#007AFF",
+              "inactiveColor": "#666666"
+            }
+          }
+        }
+      }
+    },
+    "chart": {
+      "name": "Chart",
+      "variants": {
+        "line": {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 12,
+          "padding": 16,
+          "lineColor": "#007AFF",
+          "gridColor": "#EEEEEE",
+          "labelColor": "#666666"
+        }
+      }
+    },
+    "status": {
+      "name": "Status Indicator",
+      "variants": {
+        "success": {
+          "color": "#4CAF50",
+          "icon": "check-circle"
+        },
+        "warning": {
+          "color": "#FFC107",
+          "icon": "warning"
+        },
+        "error": {
+          "color": "#F44336",
+          "icon": "error"
+        }
+      }
+    }
+  }
+} 

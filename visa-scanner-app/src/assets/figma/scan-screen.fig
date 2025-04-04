@@ -1,0 +1,52 @@
+{
+  "name": "Scanning Screen",
+  "width": 375,
+  "height": 812,
+  "backgroundColor": "#000000",
+  "elements": {
+    "cameraFrame": {
+      "type": "container",
+      "position": { "x": 37.5, "y": 206 },
+      "width": 300,
+      "height": 400,
+      "borderStyle": "dashed",
+      "borderWidth": 2,
+      "borderColor": "#FFFFFF",
+      "borderRadius": 12
+    },
+    "instruction": {
+      "type": "text",
+      "position": { "x": 37.5, "y": 146 },
+      "width": 300,
+      "text": "Căn chỉnh tài liệu trong khung hình",
+      "style": "h2",
+      "color": "#FFFFFF",
+      "align": "center"
+    },
+    "subInstruction": {
+      "type": "text",
+      "position": { "x": 37.5, "y": 616 },
+      "width": 300,
+      "text": "Đảm bảo tài liệu được đặt phẳng và đủ ánh sáng",
+      "style": "body",
+      "color": "#FFFFFF",
+      "opacity": 0.8,
+      "align": "center"
+    },
+    "scanButton": {
+      "type": "button",
+      "position": { "x": 37.5, "y": 712 },
+      "width": 300,
+      "height": 60,
+      "backgroundColor": "#007AFF",
+      "borderRadius": 10,
+      "content": {
+        "text": {
+          "content": "Bắt đầu quét",
+          "style": "h2",
+          "color": "#FFFFFF"
+        }
+      }
+    }
+  }
+} 

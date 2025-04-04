@@ -1,0 +1,97 @@
+{
+  "name": "Dashboard Screen",
+  "width": 375,
+  "height": 812,
+  "backgroundColor": "#FFFFFF",
+  "elements": {
+    "header": {
+      "type": "container",
+      "position": { "x": 0, "y": 0 },
+      "width": 375,
+      "height": 120,
+      "backgroundColor": "#F5F5F5",
+      "content": {
+        "title": {
+          "text": "Thống kê",
+          "style": "h1",
+          "marginBottom": 8
+        },
+        "subtitle": {
+          "text": "Tổng quan về hồ sơ của bạn",
+          "style": "body",
+          "color": "#666666"
+        }
+      }
+    },
+    "summaryGrid": {
+      "type": "grid",
+      "position": { "x": 20, "y": 140 },
+      "width": 335,
+      "columns": 2,
+      "gap": 16,
+      "items": [
+        {
+          "type": "card",
+          "title": "Tổng số tài liệu",
+          "value": "12",
+          "icon": "description",
+          "color": "#007AFF"
+        },
+        {
+          "type": "card",
+          "title": "Đã xử lý",
+          "value": "8",
+          "icon": "check-circle",
+          "color": "#4CAF50"
+        },
+        {
+          "type": "card",
+          "title": "Đang xử lý",
+          "value": "3",
+          "icon": "hourglass-empty",
+          "color": "#FFC107"
+        },
+        {
+          "type": "card",
+          "title": "Lỗi",
+          "value": "1",
+          "icon": "error",
+          "color": "#F44336"
+        }
+      ]
+    },
+    "recentDocuments": {
+      "type": "container",
+      "position": { "x": 20, "y": 400 },
+      "width": 335,
+      "height": 372,
+      "content": {
+        "title": {
+          "text": "Tài liệu gần đây",
+          "style": "h2",
+          "marginBottom": 16
+        },
+        "list": {
+          "type": "list",
+          "items": [
+            {
+              "title": "Hộ chiếu",
+              "date": "15/02/2024",
+              "status": "Đã xử lý"
+            },
+            {
+              "title": "Đơn xin visa",
+              "date": "14/02/2024",
+              "status": "Đang xử lý"
+            },
+            {
+              "title": "Giấy tờ tùy thân",
+              "date": "13/02/2024",
+              "status": "Lỗi"
+            }
+          ]
+        }
+      }
+    }
+  }
+} 

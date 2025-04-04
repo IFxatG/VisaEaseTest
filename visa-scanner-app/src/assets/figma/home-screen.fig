@@ -1,0 +1,63 @@
+{
+  "name": "Home Screen",
+  "width": 375,
+  "height": 812,
+  "backgroundColor": "#FFFFFF",
+  "elements": {
+    "scanButton": {
+      "type": "button",
+      "position": { "x": 87.5, "y": 376 },
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#007AFF",
+      "borderRadius": 12,
+      "shadow": "medium",
+      "content": {
+        "icon": {
+          "name": "camera-alt",
+          "size": 24,
+          "color": "#FFFFFF"
+        },
+        "text": {
+          "content": "Quét tài liệu",
+          "style": "h2",
+          "color": "#FFFFFF"
+        }
+      }
+    },
+    "bottomNav": {
+      "type": "navigation",
+      "position": { "x": 0, "y": 712 },
+      "width": 375,
+      "height": 100,
+      "backgroundColor": "#FFFFFF",
+      "borderTop": {
+        "width": 1,
+        "color": "#EEEEEE"
+      },
+      "items": [
+        {
+          "icon": "home",
+          "label": "Trang chủ",
+          "active": true
+        },
+        {
+          "icon": "camera-alt",
+          "label": "Quét"
+        },
+        {
+          "icon": "assessment",
+          "label": "Kết quả"
+        },
+        {
+          "icon": "article",
+          "label": "Tin tức"
+        },
+        {
+          "icon": "person",
+          "label": "Hồ sơ"
+        }
+      ]
+    }
+  }
+} 

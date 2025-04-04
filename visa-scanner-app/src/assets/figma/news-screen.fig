@@ -1,0 +1,74 @@
+{
+  "name": "News Screen",
+  "width": 375,
+  "height": 812,
+  "backgroundColor": "#FFFFFF",
+  "elements": {
+    "header": {
+      "type": "container",
+      "position": { "x": 0, "y": 0 },
+      "width": 375,
+      "height": 120,
+      "backgroundColor": "#F5F5F5",
+      "content": {
+        "title": {
+          "text": "Tin tức",
+          "style": "h1",
+          "marginBottom": 8
+        },
+        "subtitle": {
+          "text": "Cập nhật mới nhất về visa",
+          "style": "body",
+          "color": "#666666"
+        }
+      }
+    },
+    "newsList": {
+      "type": "list",
+      "position": { "x": 20, "y": 140 },
+      "width": 335,
+      "height": 672,
+      "items": [
+        {
+          "type": "card",
+          "image": {
+            "width": 100,
+            "height": 100,
+            "borderRadius": 8
+          },
+          "content": {
+            "title": "Thay đổi quy định xin visa du lịch Mỹ",
+            "description": "Chính phủ Mỹ vừa thông báo những thay đổi mới trong quy trình xin visa du lịch...",
+            "date": "15/02/2024"
+          }
+        },
+        {
+          "type": "card",
+          "image": {
+            "width": 100,
+            "height": 100,
+            "borderRadius": 8
+          },
+          "content": {
+            "title": "Hướng dẫn mới về hồ sơ xin visa Schengen",
+            "description": "Các quốc gia Schengen đã cập nhật yêu cầu về hồ sơ xin visa...",
+            "date": "14/02/2024"
+          }
+        },
+        {
+          "type": "card",
+          "image": {
+            "width": 100,
+            "height": 100,
+            "borderRadius": 8
+          },
+          "content": {
+            "title": "Tăng cường bảo mật thông tin visa",
+            "description": "Các quốc gia đang triển khai các biện pháp mới để bảo vệ thông tin visa...",
+            "date": "13/02/2024"
+          }
+        }
+      ]
+    }
+  }
+} 

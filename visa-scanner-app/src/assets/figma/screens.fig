@@ -1,0 +1,210 @@
+{
+  "frames": {
+    "home": {
+      "name": "Home Screen",
+      "width": 375,
+      "height": 812,
+      "backgroundColor": "#FFFFFF",
+      "elements": {
+        "scanButton": {
+          "type": "button",
+          "position": { "x": 37.5, "y": 406 },
+          "width": 300,
+          "height": 120,
+          "backgroundColor": "#007AFF",
+          "borderRadius": 15,
+          "shadow": "medium",
+          "content": {
+            "icon": {
+              "name": "camera-alt",
+              "size": 40,
+              "color": "#FFFFFF"
+            },
+            "text": {
+              "content": "Quét Tài Liệu",
+              "style": "h2",
+              "color": "#FFFFFF"
+            }
+          }
+        },
+        "bottomNav": {
+          "type": "navigation",
+          "position": { "x": 0, "y": 712 },
+          "width": 375,
+          "height": 100,
+          "backgroundColor": "#FFFFFF",
+          "borderTop": {
+            "width": 1,
+            "color": "#EEEEEE"
+          },
+          "items": [
+            {
+              "icon": "home",
+              "label": "Trang chủ",
+              "active": true
+            },
+            {
+              "icon": "dashboard",
+              "label": "Thống kê"
+            },
+            {
+              "icon": "article",
+              "label": "Tin tức"
+            },
+            {
+              "icon": "map",
+              "label": "Bản đồ"
+            }
+          ]
+        }
+      }
+    },
+    "scan": {
+      "name": "Scan Screen",
+      "width": 375,
+      "height": 812,
+      "backgroundColor": "#000000",
+      "elements": {
+        "overlay": {
+          "type": "container",
+          "position": { "x": 0, "y": 0 },
+          "width": 375,
+          "height": 712,
+          "backgroundColor": "rgba(0, 0, 0, 0.5)",
+          "content": {
+            "instruction": {
+              "text": "Căn chỉnh tài liệu trong khung hình",
+              "style": "h1",
+              "color": "#FFFFFF",
+              "align": "center"
+            },
+            "subInstruction": {
+              "text": "Đảm bảo tài liệu được đặt phẳng và đủ ánh sáng",
+              "style": "body",
+              "color": "#FFFFFF",
+              "opacity": 0.8,
+              "align": "center"
+            }
+          }
+        },
+        "scanButton": {
+          "type": "button",
+          "position": { "x": 37.5, "y": 712 },
+          "width": 300,
+          "height": 60,
+          "backgroundColor": "#007AFF",
+          "borderRadius": 10,
+          "content": {
+            "text": {
+              "content": "Bắt đầu quét",
+              "style": "h2",
+              "color": "#FFFFFF"
+            }
+          }
+        }
+      }
+    },
+    "review": {
+      "name": "Review Screen",
+      "width": 375,
+      "height": 812,
+      "backgroundColor": "#FFFFFF",
+      "elements": {
+        "imageContainer": {
+          "type": "container",
+          "position": { "x": 0, "y": 0 },
+          "width": 375,
+          "height": 300,
+          "backgroundColor": "#F5F5F5"
+        },
+        "formContainer": {
+          "type": "container",
+          "position": { "x": 20, "y": 320 },
+          "width": 335,
+          "height": 472,
+          "content": {
+            "fullName": {
+              "type": "input",
+              "label": "Họ và tên",
+              "placeholder": "Nhập họ và tên"
+            },
+            "passportNumber": {
+              "type": "input",
+              "label": "Số hộ chiếu",
+              "placeholder": "Nhập số hộ chiếu"
+            },
+            "submitButton": {
+              "type": "button",
+              "width": 335,
+              "height": 60,
+              "backgroundColor": "#007AFF",
+              "borderRadius": 8,
+              "content": {
+                "text": {
+                  "content": "Xác nhận",
+                  "style": "h2",
+                  "color": "#FFFFFF"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "result": {
+      "name": "Result Screen",
+      "width": 375,
+      "height": 812,
+      "backgroundColor": "#FFFFFF",
+      "elements": {
+        "header": {
+          "type": "container",
+          "position": { "x": 0, "y": 0 },
+          "width": 375,
+          "height": 120,
+          "backgroundColor": "#F5F5F5",
+          "content": {
+            "title": {
+              "text": "Kết quả phân tích",
+              "style": "h1"
+            },
+            "subtitle": {
+              "text": "Họ tên: {fullName}",
+              "style": "body"
+            }
+          }
+        },
+        "chart": {
+          "type": "chart",
+          "position": { "x": 20, "y": 140 },
+          "width": 335,
+          "height": 220,
+          "data": {
+            "labels": ["Độ rõ", "Độ chính xác", "Độ tin cậy"],
+            "values": [85, 92, 88]
+          }
+        },
+        "scoreBox": {
+          "type": "container",
+          "position": { "x": 37.5, "y": 380 },
+          "width": 300,
+          "height": 120,
+          "backgroundColor": "#F5F5F5",
+          "borderRadius": 15,
+          "content": {
+            "score": {
+              "text": "88",
+              "style": "h1",
+              "color": "#4CAF50"
+            },
+            "status": {
+              "text": "Tốt",
+              "style": "h2",
+              "color": "#4CAF50"
+            }
+          }
+        }
+      }
+    }
+  }
+} 

@@ -94,4 +94,4 @@ Dự án được phân phối dưới giấy phép MIT. Xem file `LICENSE` đ�
 ## Liên hệ
 
 - Email: nghia.hhtn@gmail.com
-- Website: https://github.com/hht-nghia/visa-scanner-app 
+- Website: https://github.com/hht-nghia/visa-scanner-app

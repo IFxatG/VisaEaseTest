@@ -2,84 +2,94 @@
 
 Hệ thống quét và phân tích tài liệu xin visa thông minh, bao gồm ứng dụng di động và API backend.
 
-## Cấu trúc dự án
+## Tính Năng Mới
 
-Dự án được chia thành hai phần chính:
+- Hệ thống logging toàn diện với Winston
+- Giám sát lỗi với Sentry
+- Rate limiting cho API
+- Sao lưu tự động với AWS S3
+- CI/CD pipeline với GitHub Actions
+- Testing đầy đủ với Jest
+- Bảo mật nâng cao
 
-### 1. Ứng dụng di động (visa-scanner-app)
-
-Ứng dụng React Native giúp người dùng quét và phân tích tài liệu xin visa.
-
-- Quét tài liệu từ camera hoặc thư viện
-- Phân tích tài liệu tự động
-- Xác thực người dùng với JWT
-- Lưu trữ tài liệu an toàn
-- Giao diện người dùng thân thiện
-
-[Xem chi tiết về ứng dụng di động](./visa-scanner-app/README.md)
-
-### 2. API Backend (visa-scanner-api)
-
-Backend API cung cấp các dịch vụ cho ứng dụng di động.
-
-- Xác thực và phân quyền
-- Xử lý và phân tích tài liệu
-- Lưu trữ dữ liệu
-- Bảo mật end-to-end
-
-[Xem chi tiết về API backend](./visa-scanner-api/README.md)
-
-## Cài đặt
-
-### Yêu cầu
-
-- Node.js (v14 trở lên)
-- npm hoặc yarn
-- React Native CLI
-- Android Studio (cho Android)
-- Xcode (cho iOS, chỉ macOS)
-- PostgreSQL
-- Supabase
-
-### Cài đặt dependencies
+## Cài Đặt Nhanh
 
 ```bash
-# Cài đặt dependencies cho ứng dụng di động
+# Clone repository
+git clone https://github.com/hht-nghia/visa-scanner-app.git
 cd visa-scanner-app
-npm install
 
-# Cài đặt dependencies cho API backend
-cd ../visa-scanner-api
-npm install
+# Chạy script cài đặt
+./setup.sh
 ```
 
-### Chạy ứng dụng
+## Cấu Hình Môi Trường
 
-#### Backend API
+1. Sao chép file môi trường mẫu:
+```bash
+cp visa-scanner-api/.env.example visa-scanner-api/.env
+```
+
+2. Cập nhật các biến môi trường trong file `.env`:
+- Cấu hình Supabase
+- Cấu hình JWT
+- Cấu hình Google Document AI
+- Cấu hình AWS S3
+- Cấu hình Sentry
+- Các cấu hình khác
+
+## Khởi Chạy Ứng Dụng
+
+### Backend API
 
 ```bash
 cd visa-scanner-api
 npm run dev
 ```
 
-#### Ứng dụng di động
+### Ứng Dụng Di Động
 
 ```bash
 cd visa-scanner-app
-npm run android  # Cho Android
-npm run ios      # Cho iOS
+# Cho Android
+npm run android
+# Cho iOS
+npm run ios
 ```
 
-## Công nghệ sử dụng
+## Testing
 
-- **Frontend**: React Native, TypeScript
-- **Backend**: Node.js, Express
-- **Database**: PostgreSQL, Supabase
-- **Authentication**: JWT
-- **Storage**: Supabase Storage
-- **AI/ML**: Google Document AI, Grok 3 API
+```bash
+# Test Backend
+cd visa-scanner-api
+npm test
 
-## Đóng góp
+# Test Frontend
+cd visa-scanner-app
+npm test
+```
+
+## Monitoring và Logging
+
+- Logs được lưu trong thư mục `visa-scanner-api/logs`
+- Xem lỗi trong Sentry Dashboard
+- Kiểm tra metrics trong AWS CloudWatch
+
+## Backup
+
+Backup tự động chạy hàng ngày và lưu trữ trong AWS S3. Để chạy backup thủ công:
+
+```bash
+cd visa-scanner-api
+npm run backup
+```
+
+## CI/CD
+
+- Push vào nhánh `develop` để trigger test
+- Push vào nhánh `main` để trigger build và deploy
+
+## Đóng Góp
 
 1. Fork dự án
 2. Tạo branch mới (`git checkout -b feature/amazing-feature`)
@@ -87,11 +97,11 @@ npm run ios      # Cho iOS
 4. Push lên branch (`git push origin feature/amazing-feature`)
 5. Tạo Pull Request
 
-## Giấy phép
+## Giấy Phép
 
 Dự án được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết.
 
-## Liên hệ
+## Liên Hệ
 
 - Email: nghia.hhtn@gmail.com
 - Website: https://github.com/hht-nghia/visa-scanner-app

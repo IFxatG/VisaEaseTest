@@ -1,68 +1,84 @@
-name: CI
+name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop ]
 
 jobs:
-  frontend:
+  test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./visa-scanner-app
+    strategy:
+      matrix:
+        node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Run tests
-      run: npm test
-      
-    - name: Build
-      run: npm run build
-      
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: frontend-build
-        path: ./visa-scanner-app/build
 
-  backend:
+    - name: Install Dependencies
+      run: |
+        cd visa-scanner-api
+        npm ci
+        cd ../visa-scanner-app
+        npm ci
+
+    - name: Run Backend Tests
+      run: |
+        cd visa-scanner-api
+        npm test
+
+    - name: Run Frontend Tests
+      run: |
+        cd visa-scanner-app
+        npm test
+
+    - name: Run ESLint
+      run: |
+        cd visa-scanner-api
+        npm run lint
+        cd ../visa-scanner-app
+        npm run lint
+
+  build:
+    needs: test
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./visa-scanner-api
+    if: github.ref == 'refs/heads/main'
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - name: Use Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '18.x'
         cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Run tests
-      run: npm test
-      
-    - name: Build
-      run: npm run build
-      
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: backend-build
-        path: ./visa-scanner-api/dist 
+
+    - name: Build Backend
+      run: |
+        cd visa-scanner-api
+        npm ci
+        npm run build
+
+    - name: Build Frontend
+      run: |
+        cd visa-scanner-app
+        npm ci
+        npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+    - name: Deploy to Production
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      run: |
+        echo "Add your deployment commands here" 
